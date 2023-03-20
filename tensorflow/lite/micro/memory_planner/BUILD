@@ -68,6 +68,18 @@ cc_test(
 )
 
 cc_test(
+    name= "greedy_memory_planner_exp",
+    srcs = [
+        "greedy_memory_planner_exp.cc",
+    ],
+    deps = [
+        ":greedy_memory_planner",
+        "//tensorflow/lite/micro/testing:micro_test",
+    ],
+)
+
+
+cc_test(
     name = "greedy_memory_planner_test",
     srcs = [
         "greedy_memory_planner_test.cc",
